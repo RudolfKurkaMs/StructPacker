@@ -61,6 +61,9 @@ internal struct ChatMsg
     public bool IsOutgoing { get; set; }
     public string Text { get; set; }
     public DateTime TimePosted { get; set; }
+
+    [SkipPack]
+    public string ExampleIgnoredProperty { get; set; }
 }
 ```
 
