@@ -3,14 +3,14 @@
   <metadata>
     <id>StructPacker</id>
     <title>Struct Packer</title>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
     <authors>Rudolf Kurka</authors>
     <owners>Rudolf Kurka</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/Capt-Nemo-/StructPacker</projectUrl> 
+    <projectUrl>https://github.com/RudolfKurka/StructPacker</projectUrl> 
     <language>en-US</language>
-    <repository type="git" url="https://github.com/Capt-Nemo-/StructPacker.git" branch="master" />
+    <repository type="git" url="https://github.com/RudolfKurka/StructPacker.git" branch="master" />
     <description>Low-level, lightweight and performance-focused binary serializer for C# struct types that uses Source Generators technology.
 One of the fastest serializers around with minimal impact on device resources (see website for benchmarks).
 
@@ -21,7 +21,7 @@ Only for Visual Studio 2019 version 16.8+ and C# language.</description>
       </group>
     </dependencies>    
     <references>
-        <reference file="RudolfKurka.StructPackerTools.dll" />
+      <reference file="RudolfKurka.StructPackerTools.dll" />
     </references>
   </metadata>
   <files>
