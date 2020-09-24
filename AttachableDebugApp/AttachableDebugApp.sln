@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30420.98
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttachableDebugApp", "AttachableDebugApp\AttachableDebugApp.csproj", "{3B9504A9-B2DB-4013-8887-B435E7441994}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RudolfKurka.StructPackerTools", "..\RudolfKurka.StructPackerTools\RudolfKurka.StructPackerTools.csproj", "{975EB528-B1E7-4AEC-981D-1E06E8DE2935}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RudolfKurka.StructPacker", "..\RudolfKurka.StructPacker\RudolfKurka.StructPacker.csproj", "{B7992C0E-802F-4872-8541-12512EEB6574}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B9504A9-B2DB-4013-8887-B435E7441994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9504A9-B2DB-4013-8887-B435E7441994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{975EB528-B1E7-4AEC-981D-1E06E8DE2935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{975EB528-B1E7-4AEC-981D-1E06E8DE2935}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7992C0E-802F-4872-8541-12512EEB6574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7992C0E-802F-4872-8541-12512EEB6574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D868150B-EF7E-4DDD-A88C-2697EBA92660}
+	EndGlobalSection
+EndGlobal

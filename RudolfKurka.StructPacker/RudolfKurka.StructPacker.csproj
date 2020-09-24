@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>preview</LangVersion>
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <!--<SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>-->
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <!-- Package the generator in the analyzer directory of the nuget package -->
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <RestoreAdditionalProjectSources>https://dotnet.myget.org/F/roslyn/api/v3/index.json ;$(RestoreAdditionalProjectSources)</RestoreAdditionalProjectSources>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>SerializerSourceGenerator_Test</PackageId>
+    <AssemblyName>RudolfKurka.StructPacker</AssemblyName>
+    <RootNamespace>RudolfKurka.StructPacker</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <PackageTags>TestAnalyzer, analyzers</PackageTags>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG</DefineConstants>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="BuildPckDebug.bat" />
+    <None Remove="BuildPckRelease.bat" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.0">      
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.8.0-3.final" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RudolfKurka.StructPackerTools\RudolfKurka.StructPackerTools.csproj" />
+  </ItemGroup>
+
+</Project>

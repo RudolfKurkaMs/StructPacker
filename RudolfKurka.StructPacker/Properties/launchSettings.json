@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "RudolfKurka.StructPacker": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
