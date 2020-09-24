@@ -43,7 +43,7 @@ So, any project you install StructPacker in needs to have language version set t
 
 ## Installation
 
-Simply install the [nuget package](https://duckduckgo.com) and you're good to go.
+Simply install the [nuget package](https://www.nuget.org/packages/StructPacker/1.0.6) and you're good to go.
 
 ## Usage
 
