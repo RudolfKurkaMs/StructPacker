@@ -154,11 +154,13 @@ namespace RudolfKurka.StructPacker
             FqnStream = typeof(Stream).FullName,
             FqnByteArr = typeof(byte[]).FullName;
         
-        private static void GenerateExtensions(string className, ICollection<string> fields, CodeGen code)
+        private static void GenerateExtensions(string className, List<string> fields, CodeGen code)
         {
             if (fields.Count == 0)
                 throw new Exception($"Type \"{className}\" does not contain any valid members. Serializing empty types is meaningless as they take zero bytes. Add some members or exclude this type from serialization.");
             
+            // fields.Sort(CompareTwoFields);
+
             code.AppendIndent().Append($"private static int GetSize(ref {className} msg) => 0");
 
             foreach (string id in fields)
@@ -228,5 +230,7 @@ namespace RudolfKurka.StructPacker
                     code.Line($"{FqnTools}.Write(msg.{id}, destBytes, ref startIndex);");
             }
         }
+
+        // private static int CompareTwoFields(string left, string right) => string.Compare(left, right, StringComparison.Ordinal);
     }
 }
