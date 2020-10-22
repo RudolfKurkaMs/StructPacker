@@ -154,3 +154,8 @@ At the moment no. Maybe in the future.
 No, these features are considered outside of the scope of this project (in favor of performance and runtime efficiency).
 Also note there is no type information in the output sequence meaning you have to know which structure to read next and if that structure isn't what has been serialized the stream gets corrupted.
 It's up to the coder to prevent this situation.
+
+**If I make code changes to the input structure, can it still be deserialized from bytes created with it's earlier version?**
+
+Depends. StructPacker exactly follows the structure's inner layout as it is defined in code (think of it as if you're "overlaying" the input data with a structure ala C++). This means it is resistant against member renames (member names don't matter as they are not serialized at all).
+However you must avoid changing the order (and obviously the underlying type) of members or the structure will not be deserialized correctly from it's older image. This includes ignoring or un-ignoring members.
