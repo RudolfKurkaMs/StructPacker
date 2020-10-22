@@ -135,7 +135,7 @@ Test with large structure (~2MB):
 
 StructPacker is faster and uses less memory than any other tested component.
 
-However please note that in cases like Newtonsoft.Json the comparison only tells you that StructPacker is better at what it can do but Newtonsoft.Json can do much more things (trading off convenience for performance). It is also a text format (not a binary one).
+However please note that in cases like Newtonsoft.Json the comparison only tells you that StructPacker is better at what it can do but Newtonsoft.Json can do much more things (trading off performance for convenience). It is also a text format (not a binary one).
 
 Entire benchmark app is included in the source.
 
