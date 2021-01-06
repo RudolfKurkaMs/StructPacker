@@ -1,3 +1,5 @@
+[![Nuget](https://img.shields.io/nuget/v/StructPacker?style=for-the-badge)](https://www.nuget.org/packages/StructPacker/)
+
 ## Overview
 
 StructPacker is binary serializer that auto-generates C# serialization code to achieve peak runtime performance and efficiency.
