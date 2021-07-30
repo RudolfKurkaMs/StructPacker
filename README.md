@@ -30,17 +30,6 @@ This means StructPacker does not need to do any runtime type inspections or IL g
 
 Visual Studio version 16.8 and above is required as its first version to support source generators.
 
-Also Visual Studio enables source generators only for projects with "preview" language level (this is temporary measure). 
-So, any project you install StructPacker in needs to have language version set to preview for it to work. You can do that by editing .csproj file and adding "\<LangVersion>preview\</LangVersion>" for example:
-
-```
-<PropertyGroup>
-  <OutputType>Exe</OutputType>
-  <TargetFramework>netcoreapp3.1</TargetFramework>
-  <LangVersion>preview</LangVersion>
-</PropertyGroup>
-```
-
 ## Installation
 
 Simply install the [nuget package](https://www.nuget.org/packages/StructPacker/) and you're good to go.
