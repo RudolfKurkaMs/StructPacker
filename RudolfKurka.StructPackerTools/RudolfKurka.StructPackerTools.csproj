@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
-	<LangVersion>preview</LangVersion>
-	<AssemblyName>RudolfKurka.StructPackerTools</AssemblyName>
-	<RootNamespace>StructPacker</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>RudolfKurka.StructPackerTools</AssemblyName>
+    <RootNamespace>StructPacker</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

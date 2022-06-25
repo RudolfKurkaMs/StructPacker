@@ -10,7 +10,7 @@ namespace Tests
 
         static TypeSize()
         {
-            var dm = new DynamicMethod("_sizeOfType", typeof(int), new Type[0]);
+            var dm = new DynamicMethod("_sizeOfType", typeof(int), Type.EmptyTypes);
             ILGenerator il = dm.GetILGenerator();
 
             il.Emit(OpCodes.Sizeof, typeof(T));
